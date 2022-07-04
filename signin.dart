@@ -71,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: TextFormField(
+              maxLines: 1,
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -92,6 +93,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: TextFormField(
+              maxLines: 1,
               controller: _passwordController,
               obscureText: true,
               keyboardType: TextInputType.emailAddress,

@@ -64,6 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: TextFormField(
+                      maxLines: 1,
                       controller: _emailController,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (email) => isEmail(email),
@@ -89,6 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: TextFormField(
+                      maxLines: 1,
                       controller: _passwordController,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (pass) => isPassword(pass),
@@ -115,6 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: TextFormField(
+                      maxLines: 1,
                       controller: _repeatedPasswordController,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       validator: (repeatedPass) {

@@ -10,6 +10,7 @@ class AuthService {
     try {
       var user = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
+
       return user.user;
     } catch (e) {
       print(e.toString());
@@ -39,15 +40,4 @@ class AuthService {
       return null;
     }
   }
-
-  /* Future<void> updateBalance(String _uid, int balance) {
-    return _firestore
-        .collection('Users')
-        .doc(_uid)
-        .update({
-          'balance': balance,
-        })
-        .then((value) => print("Balance Updated"))
-        .catchError((error) => print("Failed to update balance: $error"));
-  } */
 }

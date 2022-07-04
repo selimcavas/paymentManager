@@ -54,10 +54,6 @@ class _searchPageState extends State<searchPage> {
                 urlImage: urlImages[index],
               ));
     });
-
-    /* for (final title in titles) {
-      debugPrint(title);
-    } */
   }
 
   @override
@@ -81,6 +77,36 @@ class _searchPageState extends State<searchPage> {
             ),
             title: Text(article.title),
             subtitle: Text(article.url),
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: Text(article.title),
+                    content: Container(
+                      height: 400,
+                      child: Column(
+                        children: <Widget>[
+                          Image.network(
+                            article.urlImage,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          Text(article.url),
+                        ],
+                      ),
+                    ),
+                    actions: <Widget>[
+                      TextButton(
+                        child: Text('Close'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
           );
         },
       ),

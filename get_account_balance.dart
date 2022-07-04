@@ -26,7 +26,7 @@ class fetchBalance extends StatelessWidget {
                 snapshot.data!.data() as Map<String, dynamic>;
             return accountBalancePage(balance: data['balance']);
           } else {
-            return Text('Loading...');
+            return Center(child: Text('Loading...'));
           }
         },
       ),
